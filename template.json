@@ -1,0 +1,223 @@
+{
+    "id": "luxury-graduation-congratulations",
+    "name": "تهنئة تخرج فاخرة",
+    "version": "1.0.0",
+    "html": "index.html",
+    "css": "style.css",
+    "fields": [
+        {
+            "key": "showGraduateImage",
+            "label": "إظهار صورة الخريج",
+            "type": "select",
+            "formTab": "design",
+            "required": true,
+            "defaultValue": "yes",
+            "options": [
+                {
+                    "label": "نعم",
+                    "value": "yes"
+                },
+                {
+                    "label": "لا",
+                    "value": "no"
+                }
+            ]
+        },
+        {
+            "key": "graduateImage",
+            "label": "صورة الخريج",
+            "type": "image",
+            "requiredWhen": {
+                "field": "showGraduateImage",
+                "equals": "yes"
+            },
+            "visibleWhen": {
+                "field": "showGraduateImage",
+                "equals": "yes"
+            },
+            "defaultValue": "https://placehold.co/900x1200/f4efe4/9a6b2f?text=Graduate",
+            "hint": "ارفع صورة واضحة للخريج ويفضل أن تكون بالطول"
+        },
+        {
+            "key": "gender",
+            "label": "نوع الخريج",
+            "type": "select",
+            "formTab": "design",
+            "required": true,
+            "defaultValue": "male",
+            "options": [
+                {
+                    "label": "خريج",
+                    "value": "male"
+                },
+                {
+                    "label": "خريجة",
+                    "value": "female"
+                }
+            ]
+        },
+        {
+            "key": "smallTitle",
+            "label": "النص العلوي",
+            "type": "text",
+            "required": true,
+            "minLength": 3,
+            "maxLength": 80,
+            "defaultValue": "بكل الفخر والاعتزاز"
+        },
+        {
+            "key": "title",
+            "label": "العنوان",
+            "type": "text",
+            "required": true,
+            "minLength": 3,
+            "maxLength": 60,
+            "defaultValue": "تهنئة تخرج"
+        },
+        {
+            "key": "subtitle",
+            "label": "النص أسفل العنوان",
+            "type": "textarea",
+            "required": true,
+            "minLength": 10,
+            "maxLength": 160,
+            "defaultValue": "نبارك لك هذا الإنجاز الجميل ونسأل الله لك مستقبلاً مشرقاً مليئاً بالنجاح"
+        },
+        {
+            "key": "message",
+            "label": "رسالة التهنئة",
+            "type": "textarea",
+            "required": true,
+            "minLength": 10,
+            "maxLength": 360,
+            "defaultValue": "في يوم التخرج، تكتمل فرحة التعب والسهر، وتبدأ رحلة جديدة نحو الأحلام والطموحات. نبارك لك هذا الإنجاز المستحق، ونسأل الله أن يجعل القادم أجمل وأن يكتب لك التوفيق في كل خطوة."
+        },
+        {
+            "key": "graduateName",
+            "label": "اسم الخريج",
+            "type": "text",
+            "required": true,
+            "minLength": 2,
+            "maxLength": 50,
+            "defaultValue": "محمد"
+        },
+        {
+            "key": "degreeTitle",
+            "label": "الدرجة أو التخصص",
+            "type": "text",
+            "required": true,
+            "minLength": 2,
+            "maxLength": 80,
+            "defaultValue": "بكالوريوس علوم الحاسب"
+        },
+        {
+            "key": "universityName",
+            "label": "اسم الجامعة أو المدرسة",
+            "type": "text",
+            "required": true,
+            "minLength": 2,
+            "maxLength": 80,
+            "defaultValue": "جامعة الملك سعود"
+        },
+        {
+            "key": "graduationYear",
+            "label": "سنة التخرج",
+            "type": "text",
+            "required": true,
+            "minLength": 4,
+            "maxLength": 12,
+            "defaultValue": "2026"
+        },
+        {
+            "key": "closing",
+            "label": "رسالة الختام",
+            "type": "textarea",
+            "required": true,
+            "minLength": 3,
+            "maxLength": 180,
+            "defaultValue": "اللهم اجعل هذا التخرج بداية خير، واكتب له مستقبلاً مشرقاً ونجاحات لا تنتهي."
+        },
+        {
+            "key": "bgColor",
+            "label": "لون الخلفية",
+            "type": "color",
+            "required": true,
+            "defaultValue": "#eef3fb",
+            "formTab": "design"
+        },
+        {
+            "key": "surfaceColor",
+            "label": "لون البطاقة",
+            "type": "color",
+            "required": true,
+            "defaultValue": "#ffffff",
+            "formTab": "design"
+        },
+        {
+            "key": "primaryColor",
+            "label": "اللون الأساسي",
+            "type": "color",
+            "required": true,
+            "defaultValue": "#1f3a5f",
+            "formTab": "design"
+        },
+        {
+            "key": "accentColor",
+            "label": "لون اللمعة",
+            "type": "color",
+            "required": true,
+            "defaultValue": "#d8a84f",
+            "formTab": "design"
+        },
+        {
+            "key": "textColor",
+            "label": "لون النص",
+            "type": "color",
+            "required": true,
+            "defaultValue": "#1f2937",
+            "formTab": "design"
+        },
+        {
+            "key": "mutedColor",
+            "label": "لون النص الثانوي",
+            "type": "color",
+            "required": true,
+            "defaultValue": "#667085",
+            "formTab": "design"
+        }
+    ],
+    "sections": [
+        {
+            "key": "graduateImage",
+            "selector": ".hero-image",
+            "visibleWhen": {
+                "field": "showGraduateImage",
+                "equals": "yes"
+            }
+        },
+        {
+            "key": "smallTitle",
+            "selector": ".small-title"
+        },
+        {
+            "key": "title",
+            "selector": ".main-title"
+        },
+        {
+            "key": "subtitle",
+            "selector": ".subtitle"
+        },
+        {
+            "key": "message",
+            "selector": ".message"
+        },
+        {
+            "key": "graduate",
+            "selector": ".graduate-frame"
+        },
+        {
+            "key": "closing",
+            "selector": ".closing"
+        }
+    ]
+}

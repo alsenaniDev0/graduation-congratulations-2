@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body style="
+    --bgColor: {{bgColor}};
+    --surfaceColor: {{surfaceColor}};
+    --primaryColor: {{primaryColor}};
+    --accentColor: {{accentColor}};
+    --textColor: {{textColor}};
+    --mutedColor: {{mutedColor}};
+">
+
+    <main class="graduation-congrats-page gender-{{gender}} show-graduate-{{showGraduateImage}}">
+
+        <div class="page-art" aria-hidden="true">
+            <span class="gold-line gold-line-1"></span>
+            <span class="gold-line gold-line-2"></span>
+            <span class="spark spark-1">✦</span>
+            <span class="spark spark-2">✧</span>
+            <span class="spark spark-3">★</span>
+            <span class="glow glow-1"></span>
+            <span class="glow glow-2"></span>
+        </div>
+
+        <section class="congrats-card">
+
+            <section class="hero-image" data-section="graduateImage">
+                <img src="{{graduateImage}}" alt="صورة الخريج" class="graduate-photo" />
+                <div class="hero-pattern"></div>
+                <div class="hero-fade"></div>
+                <div class="cap-badge" aria-hidden="true">
+                    <span>🎓</span>
+                </div>
+            </section>
+
+            <section class="content">
+
+                <p class="small-title" data-section="smallTitle">
+                    {{smallTitle}}
+                </p>
+
+                <h1 class="main-title" data-section="title">
+                    {{title}}
+                </h1>
+
+                <p class="subtitle" data-section="subtitle">
+                    {{subtitle}}
+                </p>
+
+                <div class="ornament-divider" aria-hidden="true">
+                    <span></span>
+                    <strong>🎓</strong>
+                    <span></span>
+                </div>
+
+                <p class="message" data-section="message">
+                    {{message}}
+                </p>
+
+                <section class="graduate-frame" data-section="graduate">
+                    <div class="graduate-medal" aria-hidden="true">
+                        <span>🏅</span>
+                    </div>
+
+                    <div class="graduate-info">
+                        <span class="graduate-label">نبارك للخريج</span>
+                        <strong>{{graduateName}}</strong>
+                        <p>{{degreeTitle}}</p>
+                    </div>
+
+                    <div class="graduate-meta">
+                        <div>
+                            <small>الجهة التعليمية</small>
+                            <strong>{{universityName}}</strong>
+                        </div>
+                        <div>
+                            <small>دفعة</small>
+                            <strong>{{graduationYear}}</strong>
+                        </div>
+                    </div>
+                </section>
+
+                <p class="closing" data-section="closing">
+                    {{closing}}
+                </p>
+
+                <div class="bottom-symbol" aria-hidden="true">
+                    <span></span>
+                    <strong>✦</strong>
+                    <span></span>
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
